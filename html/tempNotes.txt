@@ -1,0 +1,13 @@
+components:
+    l-header
+        nav
+        logo
+    l-hero
+        header-text
+            h 
+            p 
+        img
+        btn btn--primary 
+    l-footer
+        
+
