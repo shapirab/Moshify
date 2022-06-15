@@ -149,3 +149,27 @@ p{
     }
     
 }
+
+/* Icons */
+.icon{
+    width: 40px;
+    height: 40px;
+}
+
+.icon--primary{
+    /* the fill property applies only to svg */
+    fill: var(--color-primary);
+}
+
+.icon-container{
+    /* background-color: gold; */
+    background-color: #f3f9fa;
+    width: 64px;
+    height: 64px;
+    /* because this is an inline element width and height don't
+    work on it. So: */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
