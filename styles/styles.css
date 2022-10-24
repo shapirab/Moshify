@@ -14,6 +14,11 @@
 *, *::after, *::before{
     box-sizing: border-box;
 }
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
 /* typography */
 html{
     font-size: 62.5%;
@@ -580,4 +585,43 @@ a{
 .collapsible--expanded .collapsible__content{
     max-height: 100vh;
     opacity: 1;
+}
+
+/* Blocks */
+/* We can add a variable element not just to the :root
+but to any rule. This will apply to the element and all of its children */
+.block{
+    --block-padding-vertical: 6rem;
+    padding: var(--block-padding-vertical) 2rem;
+}
+
+.block__heading{
+    margin-top: 0;
+}
+
+.block--dark{
+    background-color: #000;
+    color: #7b858b;
+}
+
+.block--dark .block__heading{
+    color: #fff;
+}
+
+/* clipping an image is easy with clip-path. We can go to clip path generator to
+clippy.
+See course 2. In clip-path we give a polygon with 2 properties for each point
+(x and y offsets), the points are top left, top right, bottom right bottom left. */
+.block--skewed-right{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+    padding-bottom: calc(var(--block-padding-vertical) + 4rem);
+}
+
+.block--skewed-left{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    padding-bottom: calc(var(--block-padding-vertical) + 4rem);
+}
+
+.block__header{
+    text-align: center;
 }
