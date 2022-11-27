@@ -222,6 +222,13 @@ a{
     white-space: nowrap;
 }
 
+.btn .icon{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
 
 .btn--primary{
     background-color: var(--color-primary);
@@ -263,10 +270,6 @@ a{
     
 }
 
-.temp{
-    width: 300px;    
-}
-
 .btn--block{
     width: 100%;
     display: inline-block;
@@ -306,7 +309,12 @@ a{
 .input-group .input{
     border: 0;
     flex-grow: 1;
+    padding: 1.5rem 2rem;
+}
+
+.input-group .btn{
     padding: 1.5rem 1rem;
+    margin-right: 1rem;
 }
 
 .input .btn{
@@ -708,6 +716,35 @@ See course 2. In clip-path we give a polygon with 2 properties for each point
     .hero__content{
         align-self: center;
         text-align: left;
+    }    
+}
+
+/* Domains */
+.domain-block .input-group{
+    box-shadow: 0 0 30px 20px #e6ebee;
+    border: 0;
+    margin: 4rem 0;
+}
+
+.domain-block__prices{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 6rem);
+    font-size: 2rem;
+    font-weight: 600;
+    justify-items: center;
+}
+
+@media (min-width: 728px) {
+    .domain-block__prices{
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        max-width: 70rem;
+        margin: 5rem auto;
+    }
+
+    .domain-block .input-group{
+        max-width: 70rem;
+        margin: 0 auto;
     }
     
 }
