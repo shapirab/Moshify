@@ -260,14 +260,17 @@ a{
 .btn--white-fill{
     background-color: white;
     border: 2px solid var(--color-headings);
-    color: var(--color-headings);
-    
+    color: var(--color-headings);    
+}
+
+.btn--white-fill:hover{
+    background-color: var(--color-headings);
+    color: white;
 }
 
 .btn--blue-fill{
     background-color: var(--color-headings);
-    color: white;
-    
+    color: white;   
 }
 
 .btn--block{
@@ -352,6 +355,15 @@ a{
 }
 
 /* Plans */
+.plan{
+    margin-bottom: 1rem;
+    transition: 0.5s;
+}
+
+.plan:hover{
+    transform: scale(1.05);
+}
+
 .plan--popular .card__header{
     position: relative;
 }
@@ -391,6 +403,12 @@ a{
 
 .plan .list__item{
     margin-bottom: 2rem;
+}
+
+@media (min-width:875px){
+    .plan{
+        margin-right: 1rem;
+    }
 }
 
 @media screen and (min-width: 1024px){
@@ -746,5 +764,20 @@ See course 2. In clip-path we give a polygon with 2 properties for each point
         max-width: 70rem;
         margin: 0 auto;
     }
-    
+}
+
+/* Plans Block*/
+.plans-block .grid{
+  gap: 5rem;
+}
+
+.plans-block .card{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (min-width:875px){
+    .plans-block .plan--popular{
+        transform: scale(1.1);
+    }
 }
