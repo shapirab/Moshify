@@ -15,6 +15,11 @@
     box-sizing: border-box;
 }
 
+::selection{
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
 .container{
     max-width: 1140px;
     margin: 0 auto;
@@ -47,6 +52,7 @@ h2{
 
 h3{
     font-size: 3rem;
+    font-weight: 500;
 }
 
 p{
@@ -142,8 +148,7 @@ a{
 /* Lists */
 .list{
     list-style: none;
-    padding-left: 0;
-    color: var(--color-headings);
+    padding-left: 0;    
 }
 
 .list--inline .list__item{
@@ -154,6 +159,7 @@ a{
 .list--tick{
     list-style-image: url('../images/icons/tick.svg');
     padding-left: 3rem;
+    color: var(--color-headings);
 }
 
 .list--tick .list__item{
@@ -432,6 +438,7 @@ a{
 /* Media */
 .media{
     display: flex;
+    margin-bottom: 4rem;
 }
 
 .media__title{
@@ -640,12 +647,12 @@ clippy.
 See course 2. In clip-path we give a polygon with 2 properties for each point
 (x and y offsets), the points are top left, top right, bottom right bottom left. */
 .block--skewed-right{
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
     padding-bottom: calc(var(--block-padding-vertical) + 4rem);
 }
 
 .block--skewed-left{
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
     padding-bottom: calc(var(--block-padding-vertical) + 4rem);
 }
 
@@ -823,5 +830,25 @@ See course 2. In clip-path we give a polygon with 2 properties for each point
 @media screen and (min-width: 768px){
     .feature:nth-of-type(even) .feature__content{
         order: 2;
+    }
+}
+
+/* Showcase block */
+.showcase__image{
+    width: 100%;
+}
+
+.showcase .media__title{
+    color: #fff;
+}
+
+@media (min-width: 768px){
+    .showcase .grid{
+        grid-template-columns: 50% 50%;
+    }
+    .showcase__image{
+        width: auto;
+        max-width: 700px;
+        justify-self: end;
     }
 }
