@@ -629,6 +629,7 @@ but to any rule. This will apply to the element and all of its children */
     padding: var(--block-padding-vertical) 2rem;
 }
 
+
 .block__heading{
     margin-top: 0;
 }
@@ -658,6 +659,7 @@ See course 2. In clip-path we give a polygon with 2 properties for each point
 
 .block__header{
     text-align: center;
+    margin-bottom: 4rem;
 }
 
 /* Nav */
