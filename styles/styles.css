@@ -508,7 +508,11 @@ a{
 @media (min-width: 768px) {
     .grid--cols-2{
         grid-template-columns: repeat(2, 1fr);
-    }   
+    } 
+    
+    .grid--cols-4{
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 @media (min-width: 1024px){
@@ -590,6 +594,10 @@ a{
 }
 
 /* Collapsible */
+.collapsible{
+    
+}
+
 .collapsible__header{
     display: flex;
     justify-content: space-between;
@@ -852,5 +860,41 @@ See course 2. In clip-path we give a polygon with 2 properties for each point
         width: auto;
         max-width: 700px;
         justify-self: end;
+    }
+}
+
+/* Footer */
+
+.footer{
+    padding: 4rem;
+}
+
+.footer .collapsible{
+    margin-bottom: 4rem;
+}
+
+.footer h2{
+    color: white;
+    text-transform: uppercase;
+}
+
+.footer li{
+    text-transform: capitalize;
+}
+
+.divider{
+    color: var(--color-body-darker);
+    width: 500px;
+    height: 30px;
+}
+
+@media (min-width: 768px){
+    .footer .collapsible__icon{
+        visibility: hidden;
+    }
+
+    .footer .collapsible__content{
+        max-height: 100vh;
+        opacity: 1;
     }
 }
